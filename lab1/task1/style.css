@@ -19,6 +19,9 @@ h1 {
 label {
     margin-bottom: 10px;
 }
+input {
+    max-width: 50px;
+}
 
 button {
     max-width: 100px;
@@ -26,4 +29,25 @@ button {
     margin: 10px;
     padding: 8px;
     border-radius: 25px;
+}
+
+#output {
+    margin: 25px;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 20px;
+}
+
+#output p {
+    margin-bottom: 10px;
+}
+
+.invalid {
+    font-size: 30px;
+    text-align: center;
 }

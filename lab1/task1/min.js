@@ -16,7 +16,7 @@ function calculate(e) {
     e.preventDefault();
 
     if (!isCorrectInput()) {
-        alert("Please enter a value for each element that adds up to 100%");
+        output.innerHTML = `<p class="invalid">Сума введених значень повинна дорівнювати 100%</p>`
         return;
     }
     const hydrogenR = +hydrogenRInput.value;
@@ -48,6 +48,7 @@ function calculate(e) {
     let warmthG = +((warmthR + 0.025 * wetR) * coefRG).toFixed(2);
 
     output.innerHTML = `
+        <hr>
         <p>Для палива з компонентним складом: H<sup>р</sup>=${hydrogenR}%; C<sup>р</sup>=${carbonR}%; S<sup>р</sup>=${sulfurR}%; N<sup>р</sup>=${nitrogenR}%; O<sup>р</sup>=${oxygenR}%; W<sup>р</sup>=${wetR}%; A<sup>р</sup>=${ashR}%:</p>
         <h2>Коефіцієнти переходу</h2>
         <p>Від робочої до сухої маси: ${coefRC}</p>
