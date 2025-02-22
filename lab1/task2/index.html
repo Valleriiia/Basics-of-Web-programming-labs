@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор складу мазуту</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Калькулятор складу мазуту</h1>
+    <form>
+        <label>Вуглець, C<sup>г</sup>: <input type="number" id="carbon" min="0" max="100" step="0.01"> %</label>
+        <label>Водень, H<sup>г</sup>: <input type="number" id="hydrogen" min="0" max="100" step="0.01"> %</label>
+        <label>Кисень, O<sup>г</sup>: <input type="number" id="oxygen" min="0" max="100" step="0.01"> %</label>
+        <label>Сірка, S<sup>г</sup>: <input type="number" id="sulfur" min="0" max="100" step="0.01"> %</label>
+        <label>Нижча теплота згоряння горючої маси, Q<sub>i</sub><sup>daf</sup>: <input type="number" id="warmth" min="0" step="0.01"> МДж/кг</label>
+        <label>Вологість робочої маси, W<sup>р</sup>: <input type="number" id="wet" min="0" max="100" step="0.01"> %</label>
+        <label>Зольність сухої маси, A<sup>с</sup>: <input type="number" id="ash" min="0" max="100" step="0.01"> %</label>
+        <label>Вміст ванадію, V<sup>г</sup>: <input type="number" id="vanadium" min="0" step="0.01"> мг/кг</label>
+        <button id="submit-btn" type="submit">Розрахувати</button>
+    </form>
+    <div id="output"></div>
+    <script src="script.js"></script>
+</body>
+</html>
