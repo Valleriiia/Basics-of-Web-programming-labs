@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background: rgb(18,18,18);
+    background: linear-gradient(13deg, rgba(18,18,18,1) 0%, rgba(50,50,50,1) 40%, rgba(80,80,80,1) 76%, rgba(120,121,121,1) 100%);
+    color: #d4f1f9;
+    background-attachment: fixed;
+}
+
 h1 {
     text-align: center;
     margin: 30px;
@@ -21,15 +28,27 @@ label {
 }
 input {
     max-width: 50px;
+    background-color: transparent;
+    color: #d4f1f9;
 }
 
 button {
-    max-width: 100px;
     align-self: flex-end;
     margin: 10px;
-    padding: 8px;
-    border-radius: 25px;
+    border: none;
+    background: linear-gradient(229deg, rgba(80,80,80,1) 0%, rgba(140,140,140,1) 100%);
+    color: #d4f1f9;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition:  all 0.35s ease-in-out;
 }
+
+button:hover {
+    background: linear-gradient(229deg, rgba(34,193,195,1) 0%, rgba(0,255,204,1) 100%);
+    color: #222;
+    box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.6);
+}
+
 
 #output {
     margin: 25px;
