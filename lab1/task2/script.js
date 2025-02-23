@@ -56,7 +56,10 @@ function calculate(e) {
     // Виведення результатів у блок output
     output.innerHTML = `
         <hr>
-        <p>Для складу горючої маси мазуту: H<sup>г</sup>=${hydrogenG}%; C<sup>г</sup>=${carbonG}%; S<sup>г</sup>=${sulfurG}%; O<sup>г</sup>=${oxygenG}%; V<sup>г</sup>=${vanadiumG} мг/кг; W<sup>р</sup>=${wet}%; A<sup>с</sup>=${ashC}%; та нижчою теплотою згоряння горючої маси мазуту Q<sub>i</sub><sup>daf</sup>=${warmthG} МДж/кг:</p>
+        <p>Для складу горючої маси мазуту: H<sup>г</sup>=${hydrogenG}%; C<sup>г</sup>=${carbonG}%; 
+            S<sup>г</sup>=${sulfurG}%; O<sup>г</sup>=${oxygenG}%; V<sup>г</sup>=${vanadiumG} мг/кг; 
+            W<sup>р</sup>=${wet}%; A<sup>с</sup>=${ashC}%; та нижчою теплотою згоряння горючої маси мазуту 
+            Q<sub>i</sub><sup>daf</sup>=${warmthG} МДж/кг:</p>
         <h2>Склад робочої маси мазуту</h2>
         <p>Водень, H<sup>р</sup>: ${hydrogenR}%</p>
         <p>Вуглець, C<sup>р</sup>: ${carbonR}%</p>

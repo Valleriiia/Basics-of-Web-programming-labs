@@ -11,7 +11,8 @@ const output = document.querySelector("#output");
 
 // Функція перевіряє, чи сума всіх компонентів дорівнює 100%
 function isCorrectInput() {
-    return +hydrogenRInput.value + +carbonRInput.value + +sulfurRInput.value + +nitrogenRInput.value + +oxygenRInput.value + +wetRInput.value + +ashRInput.value == 100;
+    return +hydrogenRInput.value + +carbonRInput.value + +sulfurRInput.value + 
+    +nitrogenRInput.value + +oxygenRInput.value + +wetRInput.value + +ashRInput.value == 100;
 }
 
 // Основна функція розрахунку
@@ -54,13 +55,15 @@ function calculate(e) {
 
     // Розрахунок теплоти згоряння
     let warmthR = +((339 * carbonR + 1030 * hydrogenR - 108.8 * (oxygenR - sulfurR) - 25 * wetR) / 1000).toFixed(4);
-    let warmthC = ((warmthR + 0.025 * wetR) * coefRC).toFixed(2);
-    let warmthG = ((warmthR + 0.025 * wetR) * coefRG).toFixed(2);
+    let warmthC = ((warmthR + 0.025 * wetR) * 100 / (100 - wetR)).toFixed(2);
+    let warmthG = ((warmthR + 0.025 * wetR) * 100 / (100 - wetR - ashR)).toFixed(2);
 
     // Вивід результатів на сторінку
     output.innerHTML = `
         <hr>
-        <p>Для палива з компонентним складом: H<sup>р</sup>=${hydrogenR}%; C<sup>р</sup>=${carbonR}%; S<sup>р</sup>=${sulfurR}%; N<sup>р</sup>=${nitrogenR}%; O<sup>р</sup>=${oxygenR}%; W<sup>р</sup>=${wetR}%; A<sup>р</sup>=${ashR}%:</p>
+        <p>Для палива з компонентним складом: 
+            H<sup>р</sup>=${hydrogenR}%; C<sup>р</sup>=${carbonR}%; S<sup>р</sup>=${sulfurR}%; 
+            N<sup>р</sup>=${nitrogenR}%; O<sup>р</sup>=${oxygenR}%; W<sup>р</sup>=${wetR}%; A<sup>р</sup>=${ashR}%:</p>
         <h2>Коефіцієнти переходу</h2>
         <p>Від робочої до сухої маси: ${coefRC}</p>
         <p>Від робочої до горючої маси: ${coefRG}</p>
@@ -81,7 +84,6 @@ function calculate(e) {
         <p>Для робочої маси: ${warmthR} МДж/к</p>
         <p>Для сухої маси: ${warmthC} МДж/к</p>
         <p>Для горючої маси: ${warmthG} МДж/к</p>
-
     `;
 }
 

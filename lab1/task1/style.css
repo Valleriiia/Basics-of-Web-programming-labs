@@ -6,7 +6,8 @@
 
 body {
     background: rgb(18,18,18);
-    background: linear-gradient(13deg, rgba(18,18,18,1) 0%, rgba(50,50,50,1) 40%, rgba(80,80,80,1) 76%, rgba(120,121,121,1) 100%);
+    background: linear-gradient(13deg, rgba(18,18,18,1) 0%, rgba(50,50,50,1) 40%, 
+              rgba(80,80,80,1) 76%, rgba(120,121,121,1) 100%);
     color: #d4f1f9;
     background-attachment: fixed;
 }
