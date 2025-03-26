@@ -7,20 +7,30 @@
     <title>Калькулятор валових викидів</title>
 </head>
 <body>
+    <!-- Заголовок сторінки -->
     <h1>Калькулятор для розрахунку валових викидів шкідливих речовин</h1>
+
+    <!-- Форма для введення даних -->
     <form>
+        <!-- Поле для маси вугілля -->
         <label for="coal">Маса вугілля: 
             <input id="coal" type="number" min="0" step="0.001"> т
         </label>
+        <!-- Поле для маси мазуту -->
         <label for="oil">Маса мазуту: 
             <input id="oil" type="number" min="0" step="0.001"> т
         </label>
+        <!-- Поле для об'єму природного газу -->
         <label for="gas">Об'єм природного газу: 
             <input id="gas" type="number" min="0" step="0.001"> тис. м<sup>3</sup>
         </label>
+        <!-- Кнопка запуску розрахунку -->
         <button id="submit-btn" type="submit">Розрахувати</button>
     </form>
+
+    <!-- Контейнер для виводу результатів -->
     <div id="output"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
