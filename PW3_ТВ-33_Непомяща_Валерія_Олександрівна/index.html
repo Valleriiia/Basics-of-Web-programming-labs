@@ -7,23 +7,36 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Заголовок сторінки -->
     <h1>Калькулятор розрахунку прибутку від сонячних електростанцій</h1>
+
+    <!-- Форма для введення вхідних даних -->
     <form>
+        <!-- Поле введення середньодобової потужності електростанції -->
         <label for="capacity">Середньодобова потужність: 
             <input id="capacity" type="number" min="0" step="0.01"> МВт
         </label>
+
+        <!-- Поле введення середньоквадратичного відхилення (похибки прогнозу) -->
         <label for="margin-error">Похибка (середньоквадратичне відхилення): 
             <input id="margin-error" type="number" min="0" step="0.01"> МВт
         </label>
+
+        <!-- Поле введення вартості електроенергії -->
         <label for="price">Вартість електроенергії: 
             <input id="price" type="number" min="0" step="0.1"> грн/кВт<sup>.</sup>год
         </label>
+
+        <!-- Кнопка для розрахунку прибутку -->
         <button id="submit-btn" type="submit">Розрахувати</button>
     </form>
 
+    <!-- Блок для виведення результатів розрахунку -->
     <div id="output"></div>
 
+    <!-- Підключення бібліотеки jStat для статистичних розрахунків -->
     <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+
     <script src="script.js"></script>
 </body>
 </html>
