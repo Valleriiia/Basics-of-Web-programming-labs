@@ -30,23 +30,23 @@
         <form>
             <h2>1. Вибір кабелів для двотрансформаторної підстанції 10 кВ</h2>
             
-            <div class="form-group">
+            <div class="input">
                 <label for="sm">Потужність навантаження, S<sub>M</sub> (кВА):</label>
                 <input type="number" id="sm" value="1300" step="100">
             </div>
-            <div class="form-group">
+            <div class="input">
                 <label for="unom">Номінальна напруга, U<sub>ном</sub> (кВ):</label>
                 <input type="number" id="unom" value="10" step="0.1">
             </div>
-            <div class="form-group">
+            <div class="input">
                 <label for="tm">Число годин використання максимуму, T<sub>m</sub> (год):</label>
                 <input type="number" id="tm" value="4000" step="100">
             </div>
-            <div class="form-group">
+            <div class="input">
                 <label for="ik">Струм короткого замикання, I<sub>K</sub> (кА):</label>
                 <input type="number" id="ik" value="2.5" step="0.1">
             </div>
-            <div class="form-group">
+            <div class="input">
                 <label for="tphi">Фіктивний час, t<sub>φ</sub> (с):</label>
                 <input type="number" id="tphi" value="2.5" step="0.1">
             </div>
@@ -61,23 +61,23 @@
         <form>
             <h2>2. Розрахунок струмів КЗ на шинах 10 кВ ГПП</h2>
             
-            <div class="form-group">
+            <div class="input">
                 <label for="ucn">Напруга системи, U<sub>c.н</sub> (кВ):</label>
                 <input type="number" id="ucn" value="10.5" step="0.1">
             </div>
-            <div class="form-group">
+            <div class="input">
                 <label for="sk">Потужність КЗ системи, S<sub>k</sub> (МВА):</label>
                 <input type="number" id="sk" value="200" step="10">
             </div>
-            <div class="form-group">
+            <div class="input">
                 <label for="ukPercent">Напруга КЗ трансформатора, U<sub>k</sub> (%):</label>
                 <input type="number" id="ukPercent" value="10.5" step="0.1">
             </div>
-            <div class="form-group">
+            <div class="input">
                 <label for="sNomT">Номінальна потужність трансформатора, S<sub>ном.Т</sub> (МВА):</label>
                 <input type="number" id="sNomT" value="6.3" step="0.1">
             </div>
-            <div class="form-group">
+            <div class="input">
                 <label for="sb">Базисна потужність, S<sub>б</sub> (МВА):</label>
                 <input type="number" id="sb" value="1000" step="100">
             </div>
@@ -92,64 +92,52 @@
     <div id="task3" class="tab-content">
         <form>
             <h2>3. Розрахунок струмів КЗ для підстанції ХПнЕМ</h2>
-            
-            <div class="input-group">
-                <div class="form-group">
+                <div class="input">
                     <label for="uHigh">Висока напруга, U<sub>в.н</sub> (кВ):</label>
                     <input type="number" id="uHigh" value="115" step="1">
                 </div>
-                <div class="form-group">
+                <div class="input">
                     <label for="uLow">Низька напруга, U<sub>н.н</sub> (кВ):</label>
                     <input type="number" id="uLow" value="11" step="1">
                 </div>
-            </div>
-            
-            <div class="input-group">
-                <div class="form-group">
+                <div class="input">
                     <label for="ukMax">Напруга КЗ трансформатора, U<sub>к.max</sub> (%):</label>
                     <input type="number" id="ukMax" value="11.1" step="0.1">
                 </div>
-                <div class="form-group">
+                <div class="input">
                     <label for="sNomTr">Номінальна потужність трансформатора, S<sub>ном.т</sub> (МВА):</label>
                     <input type="number" id="sNomTr" value="6.3" step="0.1">
                 </div>
-            </div>
             
             <h3>Нормальний режим</h3>
-            <div class="input-group">
-                <div class="form-group">
+                <div class="input">
                     <label for="rcn">Опір системи, R<sub>с.н</sub> (Ом):</label>
                     <input type="number" id="rcn" value="10.65" step="0.01">
                 </div>
-                <div class="form-group">
+                <div class="input">
                     <label for="xcn">Реактивний опір системи, X<sub>с.н</sub> (Ом):</label>
                     <input type="number" id="xcn" value="24.02" step="0.01">
                 </div>
-            </div>
             
             <h3>Мінімальний режим</h3>
-            <div class="input-group">
-                <div class="form-group">
+                <div class="input">
                     <label for="rcmin">Опір системи, R<sub>с.min</sub> (Ом):</label>
                     <input type="number" id="rcmin" value="34.88" step="0.01">
                 </div>
-                <div class="form-group">
+                <div class="input">
                     <label for="xcmin">Реактивний опір системи, X<sub>с.min</sub> (Ом):</label>
                     <input type="number" id="xcmin" value="65.68" step="0.01">
                 </div>
-            </div>
             
             <h3>Аварійний режим</h3>
-            <div class="input-group">
-                <div class="form-group">
+                <div class="input">
                     <label for="rcEmerg">Опір системи, R<sub>с.авар</sub> (Ом):</label>
                     <input type="number" id="rcEmerg" value="45.12" step="0.01">
                 </div>
-                <div class="form-group">
+                <div class="input">
                     <label for="xcEmerg">Реактивний опір системи, X<sub>с.авар</sub> (Ом):</label>
                     <input type="number" id="xcEmerg" value="78.45" step="0.01">
                 </div>
-            </div>
             
             <button id="khpenem-btn">Розрахувати</button>
         </form>
