@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab">
+            <label for="taskTab1">Порівняння надійності систем</label>
+            <input type="radio" name="task" id="taskTab1" checked>
+        </div>
+        <div class="tab">
+            <label for="taskTab2">Збитки від перерв</label>
+            <input type="radio" name="task" id="taskTab2">
+        </div>
+        <div class="slider"></div>
+    </div>
+
+    <div id="task1" class="tab-content">
+        <form>
+            <h2>Порівняння надійності одноколової та двоколової систем електропередачі</h2>
+        
+            <h3>Одноколова система</h3>
+        
+            <div class="input">
+                <label for="breaker110">Частота відмов елегазового вимикача 110 кВ (рік⁻¹):</label>
+                <input type="number" id="breaker110" step="0.001" value="0.01" required>
+            </div>
+        
+            <div class="input">
+                <label for="line110">Частота відмов ПЛ-110 кВ (рік⁻¹):</label>
+                <input type="number" id="line110" step="0.001" value="0.07" required>
+            </div>
+        
+            <div class="input">
+                <label for="transformer">Частота відмов трансформатора 110/10 кВ (рік⁻¹):</label>
+                <input type="number" id="transformer" step="0.001" value="0.015" required>
+            </div>
+        
+            <div class="input">
+                <label for="breaker10">Частота відмов ввідного вимикача 10 кВ (рік⁻¹):</label>
+                <input type="number" id="breaker10" step="0.001" value="0.02" required>
+            </div>
+        
+            <div class="input">
+                <label for="connections">Частота відмов одного приєднання 10 кВ (рік⁻¹):</label>
+                <input type="number" id="connections" step="0.001" value="0.03" required>
+            </div>
+        
+            <div class="input">
+                <label for="numConnections">Кількість приєднань 10 кВ:</label>
+                <input type="number" id="numConnections" value="6" required>
+            </div>
+        
+            <h4>Час відновлення (год)</h4>
+        
+            <div class="input">
+                <label for="t_breaker110">Час відновлення елегазового вимикача 110 кВ:</label>
+                <input type="number" id="t_breaker110" value="30" required>
+            </div>
+        
+            <div class="input">
+                <label for="t_line110">Час відновлення ПЛ-110 кВ:</label>
+                <input type="number" id="t_line110" value="10" required>
+            </div>
+
+            <div class="input">
+                <label for="t_transformer">Час відновлення трансформатора 110/10 кВ:</label>
+                <input type="number" id="t_transformer" value="100" required>
+            </div>
+        
+            <div class="input">
+                <label for="t_breaker10">Час відновлення ввідного вимикача 10 кВ:</label>
+                <input type="number" id="t_breaker10" value="15" required>
+            </div>
+        
+            <div class="input">
+                <label for="t_connections">Час відновлення приєднання 10 кВ:</label>
+                <input type="number" id="t_connections" value="2" required>
+            </div>
+        
+            <div class="input">
+                <label for="plannedOutage">Максимальний плановий простій (год/рік):</label>
+                <input type="number" id="plannedOutage" value="43" required>
+            </div>
+        
+            <h3>Двоколова система</h3>
+        
+            <div class="input">
+                <label for="sectionBreaker">Частота відмов секціонного вимикача 10 кВ (рік⁻¹):</label>
+                <input type="number" id="sectionBreaker" step="0.001" value="0.02" required>
+            </div>
+        
+            <button id="reliability-btn">Розрахувати</button>
+        </form>
+        <div id="reliability-result" class="output"></div>
+    </div>
+
+    <div id="task2" class="tab-content">
+        <form>
+            <h2>Розрахунок збитків від перерв електропостачання у разі застосування однотрансформаторної ГТП</h2>
+        
+            <div class="input">
+                <label for="failureRate">Частота відмов трансформатора (рік⁻¹):</label>
+                <input type="number" id="failureRate" step="0.001" value="0.01">
+            </div>
+        
+            <div class="input">
+                <label for="recoveryTime">Середній час відновлення (року):</label>
+                <input type="number" id="recoveryTime" step="0.001" value="0.045">
+            </div>
+        
+            <div class="input">
+                <label for="plannedOutageTime">Середній час планового простою:</label>
+                <input type="number" id="plannedOutageTime" step="0.001" value="0.004">
+            </div>
+        
+            <div class="input">
+                <label for="maxLoad">Максимальне навантаження, P<sub>M</sub> (кВт):</label>
+                <input type="number" id="maxLoad" value="5120">
+            </div>
+        
+            <div class="input">
+                <label for="usageTime">Час використання максимального навантаження, T<sub>M</sub> (год):</label>
+                <input type="number" id="usageTime" value="6451">
+            </div>
+        
+            <div class="input">
+                <label for="emergencyLossRate">Питомі збитки від аварійних вимкнень (грн./кВт·год):</label>
+                <input type="number" id="emergencyLossRate" step="0.1" value="23.6">
+            </div>
+        
+            <div class="input">
+                <label for="plannedLossRate">Питомі збитки від планових вимкнень (грн./кВт·год):</label>
+                <input type="number" id="plannedLossRate" step="0.1" value="17.6">
+            </div>
+        
+            <button id="losses-btn">Розрахувати</button>
+        </form>
+        <div id="losses-result" class="output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
