@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #121212; /* темний фон */
+    color: #e0e0e0; /* світлий текст */
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    background: #1e1e1e; /* темно-сірий контейнер */
+    padding: 20px;
+    padding-right: 40px;
+    border-radius: 10px;
+    max-width: 1100px;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.2); /* зеленувата тінь */
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+    color: #00c853; /* яскраво-зелений акцент */
+  }
+  
+  form {
+    margin-bottom: 30px;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #a5d6a7; /* світло-зелений */
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: #2c2c2c;
+    border: 1px solid #00c853;
+    border-radius: 5px;
+    color: #e0e0e0;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border: 2px solid #00e676; /* світло-зелена рамка при фокусі */
+  }
+  
+  .buttons {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #00c853;
+    border: none;
+    color: #121212;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #00e676; /* світліший зелений при наведенні */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #424242;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #00c853;
+    color: #121212;
+    font-weight: bold;
+  }
+  
+  td {
+    color: #e0e0e0;
+  }
+  
+  #results {
+    margin-top: 30px;
+  }
+  
+  

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Калькулятор електричних навантажень</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Калькулятор електричних навантажень</h1>
+
+    <form id="ep-form">
+      <h2>Додати електроприймач (ЕП)</h2>
+
+      <div class="form-grid">
+        <div>
+          <label>Назва ЕП:</label>
+          <input type="text" id="name" required value="Шліфувальний верстат">
+        </div>
+        <div>
+          <label>Підрозділ:</label>
+          <select id="section">
+            <option value="ШР1">ШР1</option>
+            <option value="ШР2">ШР2</option>
+            <option value="ШР3">ШР3</option>
+            <option value="ТП">ТП</option>
+          </select>
+        </div>
+        <div>
+          <label>ККД (ηн):</label>
+          <input type="number" id="efficiency" step="0.01" required value="0.92">
+        </div>
+        <div>
+          <label>cos φ:</label>
+          <input type="number" id="cosPhi" step="0.01" required value="0.9">
+        </div>
+        <div>
+          <label>Напруга (Uн), кВ:</label>
+          <input type="number" id="voltage" step="0.01" required value="0.38">
+        </div>
+        <div>
+          <label>Кількість (n):</label>
+          <input type="number" id="quantity" required value="4">
+        </div>
+        <div>
+          <label>Потужність (Pн), кВт:</label>
+          <input type="number" id="power" step="0.1" required value="20">
+        </div>
+        <div>
+          <label>Коефіцієнт використання (КВ):</label>
+          <input type="number" id="kv" step="0.01" required value="0.15">
+        </div>
+        <div>
+          <label>tg φ:</label>
+          <input type="number" id="tgPhi" step="0.01" required value="1.33">
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button type="button" id="add-ep">Додати ЕП</button>
+        <button type="button" id="calculate">Розрахувати</button>
+      </div>
+    </form>
+
+    <h2>Результати</h2>
+    <div id="results"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
