@@ -14,7 +14,6 @@ document.getElementById('add-ep').addEventListener('click', () => {
   };
   eps.push(ep);
   alert(`ЕП "${ep.name}" додано до ${ep.section}`);
-//   document.getElementById('ep-form').reset();
 });
 
 document.getElementById('calculate').addEventListener('click', () => {
